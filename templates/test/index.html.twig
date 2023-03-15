@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test{% endblock %}
+
+{% block body %}
+    <div class="container">
+        SweetAlert
+		<div>
+			<a id="bt1" class="btn btn-success">Info</a>
+			<a id="bt2" class="btn btn-danger">Delete</a>
+			<a id="bt3" class="btn btn-warning">Warning</a>
+			<a id="bt4" class="btn btn-danger">Error</a>
+		</div>
+		Notyf
+		<div>
+			<a class="btn btn-success" href="{{ path('app_test', {'notyf':'success'}) }}" role="button">Succès</a>
+			<a class="btn btn-info" href="{{ path('app_test', {'notyf':'info'}) }}" role="button">Info</a>
+			<a class="btn btn-warning" href="{{ path('app_test', {'notyf':'warning'}) }}" role="button">Warning</a>
+			<a class="btn btn-danger" href="{{ path('app_test', {'notyf':'error'}) }}" role="button">Error</a>
+		</div>
+	</div>
+{% endblock %}
