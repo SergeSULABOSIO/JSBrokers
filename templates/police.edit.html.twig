@@ -1,0 +1,125 @@
+{% extends "template.ui.html.twig" %}
+
+{% block classeActiveListe %}active
+{% endblock %}
+{% block classeOpenListe %}menu-open
+{% endblock %}
+{% block classeActiveListePolices %}active
+{% endblock %}
+
+{% block appTitreRubrique %}
+	<i class="fa-solid fa-umbrella"></i>
+	{{appTitreRubrique}}
+{% endblock %}
+
+{% block appCorps %}
+	{{ form_start(form, {'attr': {'novalidate':'novalidate'}}) }}
+
+	<div class="container">
+		<div class="card">
+			<h5 class="card-header">Dates</h5>
+			<div class="card-body">
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.dateoperation) }}</div>
+						<div class="col col-sm">{{ form_row(form.dateemission) }}</div>
+						<div class="col col-sm">{{ form_row(form.dateeffet) }}</div>
+						<div class="col col-sm">{{ form_row(form.dateexpiration) }}</div>
+					</div>
+				</p>
+			</div>
+			<h5 class="card-header">Information générale</h5>
+			<div class="card-body">
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.client) }}</div>
+						<div class="col-sm">{{ form_row(form.produit) }}</div>
+					</div>
+				</p>
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.reference) }}</div>
+						<div class="col col-sm">{{ form_row(form.typeavenant) }}</div>
+						<div class="col col-sm">{{ form_row(form.idavenant) }}</div>
+					</div>
+				</p>
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.assureur) }}</div>
+						<div class="col col-sm">{{ form_row(form.reassureurs) }}</div>
+					</div>
+				</p>
+			</div>
+			<h5 class="card-header">Facturation</h5>
+			<div class="card-body">
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.monnaie) }}</div>
+						<div class="col col-sm">{{ form_row(form.capital) }}</div>
+						<div class="col col-sm">{{ form_row(form.primenette) }}</div>
+						<div class="col col-sm">{{ form_row(form.fronting) }}</div>
+					</div>
+				</p>
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.tva) }}</div>
+						<div class="col col-sm">{{ form_row(form.fraisadmin) }}</div>
+						<div class="col col-sm">{{ form_row(form.arca) }}</div>
+						<div class="col col-sm">{{ form_row(form.primetotale) }}</div>
+					</div>
+				</p>
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.discount) }}</div>
+						<div class="col col-sm">{{ form_row(form.modepaiement) }}</div>
+						<div class="col col-sm">{{ form_row(form.remarques) }}</div>
+						<div class="col col-sm">{{ form_row(form.entreprise) }}</div>
+					</div>
+				</p>
+			</div>
+			<h5 class="card-header">Commissions et partage</h5>
+			<div class="card-body">
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.partenaire) }}</div>
+					</div>
+				</p>
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.ricom) }}</div>
+						<div class="col col-sm">{{ form_row(form.cansharericom) }}</div>
+						<div class="col col-sm">{{ form_row(form.ricompayableby) }}</div>
+					</div>
+				</p>
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.localcom) }}</div>
+						<div class="col col-sm">{{ form_row(form.cansharelocalcom) }}</div>
+						<div class="col col-sm">{{ form_row(form.localcompayableby) }}</div>
+					</div>
+				</p>
+				<p class="card-text">
+					<div class="form-row align-items-end">
+						<div class="col col-sm">{{ form_row(form.frontingcom) }}</div>
+						<div class="col col-sm">{{ form_row(form.cansharefrontingcom) }}</div>
+						<div class="col col-sm">{{ form_row(form.frontingcompayableby) }}</div>
+					</div>
+				</p>
+				<p class="card-text">
+					{{ form_rest(form) }}
+				</p>
+			</div>
+		</div>
+		&nbsp
+																								&nbsp
+																								&nbsp
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	<script>
+		$(document).ready(function () {
+$('.select2').select2();
+});
+	</script>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "template.ui.html.twig" %}
+
+{% block classeActiveListe %}active
+{% endblock %}
+{% block classeOpenListe %}menu-open
+{% endblock %}
+{% block classeActiveListePartenaires %}active
+{% endblock %}
+
+{% block appTitreRubrique %}{% endblock %}
+
+{% block appCorps %}
+	<div class="row">
+		<div class="row justify-content-center">
+			<div class="card m-2 p-0">
+				<h5 class="card-header">
+					<i class="fa-solid fa-shield-halved"></i>
+					{{partenaire.nom}}
+				</h5>
+				<div class="card-body">
+					<div class="card-subtitle mb-2 text-muted">
+						<i class="fa-regular fa-envelope"></i>
+						Email:
+						{{partenaire.email}}
+					</div>
+					<div class="card-subtitle mb-2 text-muted">
+						<i class="fa-solid fa-envelope-open-text"></i>
+						Wite Web:
+						{{partenaire.siteweb}}
+					</div>
+					<p class="card-text">
+						<span class="badge bg-secondary">Part:
+							{{partenaire.part|number_format(2, ',', '.')}}%</span>
+						| Adresse:
+						{{partenaire.adresse}}</p>
+					<a class="btn btn-light btn-sm card-link" href="{{ path('partenaire.list') }}">
+						<i class="fa-solid fa-rectangle-list"></i>
+						Retour à la liste
+					</a>
+					<span class="dropdown show">
+						<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa-solid fa-screwdriver-wrench"></i>
+							Actions
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<a class="dropdown-item" href="{{ path('partenaire.edit', {id:partenaire.id}) }}">
+								<i class="fa-solid fa-pen-to-square"></i>
+								Modifier
+							</a>
+							<a class="dropdown-item text-danger" href="{{ path('partenaire.delete', {id:partenaire.id}) }}">
+								<i class="fa-solid fa-trash-can"></i>
+								Supprimer
+							</a>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

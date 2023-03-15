@@ -1,0 +1,59 @@
+{% extends "template.ui.html.twig" %}
+
+{% block classeActiveListe %}active{% endblock %}
+{% block classeOpenListe %}menu-open{% endblock %}
+{% block classeActiveListeEntreprises %}active{% endblock %}
+
+{% block appTitreRubrique %}{% endblock %}
+
+{% block appCorps %}
+	<div class="row">
+		<div class="row justify-content-center">
+			<div class="card m-2 p-0">
+				<h5 class="card-header">
+					<i class="fa-solid fa-house-laptop"></i>
+					{{entreprise.nom}}
+				</h5>
+				<div class="card-body">
+					<div class="card-subtitle mb-2 text-muted">
+						<i class="fa-solid fa-phone"></i>
+						Téléphone:
+						{{entreprise.telephone}}
+					</div>
+					<div class="card-subtitle mb-2 text-muted">
+						<i class="fa-solid fa-envelope-open-text"></i>
+						Secteur:
+						{{entreprise.secteur}}
+					</div>
+					<p class="card-text">Adresse:
+						{{entreprise.adresse}}
+						| RCCM:
+						{{entreprise.rccm}}
+						| Id. Nat:
+						{{entreprise.idnat}}</p>
+					<a class="btn btn-light btn-sm card-link" href="{{ path('entreprise.list') }}">
+						<i class="fa-solid fa-rectangle-list"></i>
+						Retour à la liste
+					</a>
+					<span class="dropdown show">
+						<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa-solid fa-screwdriver-wrench"></i>
+							Actions
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<a class="dropdown-item" href="{{ path('entreprise.edit', {id:entreprise.id}) }}">
+								<i class="fa-solid fa-pen-to-square"></i>
+								Modifier
+							</a>
+							<a class="dropdown-item text-danger" href="{{ path('entreprise.delete', {id:entreprise.id}) }}">
+								<i class="fa-solid fa-trash-can"></i>
+								Supprimer
+							</a>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

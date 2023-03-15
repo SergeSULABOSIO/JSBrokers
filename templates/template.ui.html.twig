@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			{% block appTitre %}
+				JS Broker
+			{% endblock %}
+		</title>
+
+		<!-- Liens utiles pour les pages -->
+		<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="{{ asset('node_modules/select2/dist/css/select2.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.css') }}">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+		<link rel="stylesheet" href="{{ asset('node_modules/adminlte/plugins/fontawesome-free/css/all.min.css')}}">
+		<link rel="stylesheet" href="{{ asset('node_modules/adminlte/dist/css/adminlte.min.css')}}">
+
+
+	</head>
+	<body class="hold-transition sidebar-mini">
+		<div
+			class="wrapper">
+			<!-- Navbar -->
+			<nav
+				class="main-header navbar navbar-expand navbar-white navbar-light">
+				<!-- Left navbar links -->
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" data-widget="pushmenu" href="#" role="button">
+							<i class="fas fa-bars"></i>
+						</a>
+					</li>
+					<li class="nav-item d-none d-sm-inline-block">
+						<a href="#" class="nav-link">Acceuil</a>
+					</li>
+					<li class="nav-item d-none d-sm-inline-block">
+						<a href="#" class="nav-link">Contact</a>
+					</li>
+				</ul>
+
+			</nav>
+			<!-- /.navbar -->
+
+
+			<!-- Main Sidebar Container -->
+			<aside
+				class="main-sidebar sidebar-dark-primary elevation-4">
+				<!-- Brand Logo -->
+				<div class="brand-link">
+					<span class="brand-text font-weight-light">JS Broker</span>
+				</div>
+				<!-- Sidebar -->
+				<div
+					class="sidebar">
+					<!-- Sidebar user panel (optional) -->
+					<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+						<div class="image">
+							<img src="{{ asset('node_modules/adminlte/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+						</div>
+						<div class="info">
+							<a href="#" class="d-block nav-link">Serge SULA BOSIO</a>
+						</div>
+					</div>
+
+					<!-- Sidebar Menu -->
+					<nav class="mt-2">
+						<ul
+							class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+							<!-- Add icons to the links using the .nav-icon class
+																																																																																																																																																										               with font-awesome or any other icon font library -->
+							<li class="nav-item {% block classeOpenDashboard %}{% endblock %}">
+								<a href="{{ path('dashboard') }}" class="nav-link {% block classeActiveDashboard %}{% endblock %}">
+									<i class="nav-icon fas fa-tachometer-alt"></i>
+									<p>
+										Tableau de bord
+									</p>
+								</a>
+							</li>
+							{# LES LISTES #}
+							<li class="nav-item {% block classeOpenListe %}{% endblock %}">
+								<a href="#" class="nav-link {% block classeActiveListe %}{% endblock %}">
+									<i class="fa-solid fa-bars"></i>
+									<p>
+										Entités
+										<i class="right fas fa-angle-left"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListeEntreprises %}{% endblock %}" href="{{ path('entreprise.list') }}">
+											<i class="fa-solid fa-house-laptop pl-3"></i>
+											<p>Entreprises</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListePolices %}{% endblock %}" href="{{ path('police.list') }}">
+											<i class="fa-solid fa-umbrella pl-3"></i>
+											<p>Polices</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListeClients %}{% endblock %}" href="{{ path('client.list') }}">
+											<i class="fa-solid fa-people-roof pl-3"></i>
+											<p>Clients</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListePartenaires %}{% endblock %}" href="{{ path('partenaire.list') }}">
+											<i class="fa-solid fa-handshake pl-3"></i>
+											<p>Partenaires</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListeAssureurs %}{% endblock %}" href="{{ path('assureur.list') }}">
+											<i class="fa-solid fa-shield-halved pl-3"></i>
+											<p>Assureurs</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListeAutomobiles %}{% endblock %}" href="{{ path('automobile.list') }}">
+											<i class="fa-solid fa-car pl-3"></i>
+											<p>Automobiles</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListeProduits %}{% endblock %}" href="{{ path('produit.list') }}">
+											<i class="fa-solid fa-hands-holding-child pl-3"></i>
+											<p>Produits</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListeContacts %}{% endblock %}" href="{{ path('contact.list') }}">
+											<i class="fa-solid fa-address-book pl-3"></i>
+											<p>Contacts</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListeMonnaies %}{% endblock %}" href="{{ path('monnaie.list') }}">
+											<i class="fa-solid fa-money-check-dollar pl-3"></i>
+											<p>Monnaies</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListeTaxes %}{% endblock %}" href="{{ path('taxe.list') }}">
+											<i class="fa-solid fa-scale-balanced pl-3"></i>
+											<p>Impôts / Taxes</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+							{# LES PAIEMENTS #}
+							<li class="nav-item {% block classeOpenPaiements %}{% endblock %}">
+								<a href="#" class="nav-link {% block classeActivePaiement %}{% endblock %}">
+									<i class="fa-solid fa-bars"></i>
+									<p>
+										Paiements
+										<i class="right fas fa-angle-left"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListePopTaxes %}{% endblock %}" href="{{ path('poptaxe.list') }}">
+											<i class="fa-solid fa-filter-circle-dollar pl-3"></i>
+											<p>Taxes</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListePopPartenaires %}{% endblock %}" href="{{ path('poppartenaire.list') }}">
+											<i class="fa-solid fa-filter-circle-dollar pl-3"></i>
+											<p>Partenaires</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveListePopCommissions %}{% endblock %}" href="{{ path('popcommission.list') }}">
+											<i class="fa-solid fa-filter-circle-dollar pl-3"></i>
+											<p>Commissions</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+							{# LES OUTSTANDING #}
+							<li class="nav-item {% block classeOpenOutstanding %}{% endblock %}">
+								<a href="#" class="nav-link {% block classeActiveOutstanding %}{% endblock %}">
+									<i class="fa-solid fa-bars"></i>
+									<p>
+										Oustandings
+										<i class="right fas fa-angle-left"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveOutstandingTaxes %}{% endblock %}" href="{{ path('outstanding.taxe.list') }}">
+											<i class="fa-solid fa-filter-circle-dollar pl-3"></i>
+											<p>Taxes</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveOutstandingPartenaires %}{% endblock %}" href="{{ path('outstanding.retrocommission.list') }}">
+											<i class="fa-solid fa-filter-circle-dollar pl-3"></i>
+											<p>Partenaires</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link {% block classeActiveOutstandingCommissions %}{% endblock %}" href="{{ path('outstanding.commission.list') }}">
+											<i class="fa-solid fa-filter-circle-dollar pl-3"></i>
+											<p>Commissions</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-header">PARAMETRES</li>
+							<li class="nav-item">
+								<a href="pages/calendar.html" class="nav-link">
+									<i class="nav-icon fas fa-calendar-alt"></i>
+									<p>
+										Utilisateur
+										<span class="badge badge-info right">12</span>
+									</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="pages/gallery.html" class="nav-link">
+									<i class="nav-icon far fa-image"></i>
+									<p>
+										Entreprise
+										<span class="badge badge-info right">2</span>
+									</p>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- /.sidebar-menu -->
+				</div>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Content Wrapper. Contains page content -->
+			<div
+				class="content-wrapper">
+				<!-- Content Header (Page header) -->
+				<div class="content-header">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col">
+								<h4 class="m-0">
+									{% block appTitreRubrique %}
+										Titre Rubrique
+									{% endblock %}
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.content-header -->
+
+				<!-- Main content -->
+				<div class="content">
+					<div class="container-fluid">
+						<div>
+							{% block appMessageFlashBag %}
+								{% for message in app.session.flashBag.get('info') %}
+									<div class="alert alert-info" role="alert">
+										{{ message }}
+									</div>
+								{% endfor %}
+								{% for message in app.session.flashBag.get('success') %}
+									<div class="alert alert-success" role="alert">
+										{{ message }}
+									</div>
+								{% endfor %}
+								{% for message in app.session.flashBag.get('error') %}
+									<div class="alert alert-danger" role="alert">
+										{{ message }}
+									</div>
+								{% endfor %}
+							{% endblock %}
+						</div>
+						<div>
+							{% block appCorps %}
+								AppCorps de l'application
+							{% endblock %}
+						</div>
+					</div>
+					<!-- /.container-fluid -->
+				</div>
+				<!-- /.content -->
+			</div>
+			<!-- /.content-wrapper -->
+
+
+			<!-- Main Footer -->
+			<footer class="main-footer">
+				<strong>Copyright &copy; 2023
+					<a href="#">JS Drokers</a>.</strong>
+				All rights reserved.
+				<div class="float-right d-none d-sm-inline-block">
+					<b>Version</b>
+					1.0.0</div>
+			</footer>
+		</div>
+		<!-- ./wrapper -->
+
+		<!-- REQUIRED SCRIPTS -->
+		
+		<script src="{{ asset('node_modules/adminlte/plugins/jquery/jquery.min.js')}}"> </script>
+		<script src="{{ asset('node_modules/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+		<script src="{{ asset('node_modules/adminlte/dist/js/adminlte.min.js')}}"></script>
+		<script src="{{ asset('assets/js/scripts.js') }}"></script>
+		<script src="{{ asset('node_modules/select2/dist/js/select2.min.js') }}"></script>
+
+		<!-- Pour les graphiques du tableau de bord -->
+		<script src="{{ asset('node_modules/adminlte/plugins/chart.js/Chart.min.js')}}"></script>
+		<script src="{{ asset('node_modules/adminlte/plugins/flot/jquery.flot.js')}}"></script>
+		<script src="{{ asset('node_modules/adminlte/plugins/flot/plugins/jquery.flot.resize.js')}}"></script>
+		<script src="{{ asset('node_modules/adminlte/plugins/flot/plugins/jquery.flot.pie.js')}}"></script>
+
+
+		{% block javascripts %}
+			<!-- Page specific script -->
+			<script>
+
+			$(function () {
+				//--------------
+				//- PRIMES PAR MOIS -
+				//--------------
+
+				var dataPrimes = {
+					labels  : ['Janv', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc'],
+					datasets: [
+					{
+						label               : 'Primes (HT)',
+						backgroundColor     : 'gray',
+						borderColor         : 'gray',
+						pointRadius          : false,
+						pointColor          : 'gray',
+						pointStrokeColor    : 'gray',
+						pointHighlightFill  : 'gray',
+						pointHighlightStroke: 'gray',
+						data                : JSON.parse(document.querySelector('.primes_ht_mois').dataset.donnees)//[15000, 2000, 25000, 35000, 65000, 75000, 10000, 15500, 64000, 6550, 12000, 25000]
+					},
+					{
+						label               : 'Primes (TTC)',
+						backgroundColor     : 'black',
+						borderColor         : 'black',
+						pointRadius         : false,
+						pointColor          : 'orange',
+						pointStrokeColor    : 'orange',
+						pointHighlightFill  : 'orange',
+						pointHighlightStroke: 'orange',
+						data                : JSON.parse(document.querySelector('.primes_ttc_mois').dataset.donnees)//[1500, 1500, 24500, 30000, 60000, 73500, 9500, 10000, 35000, 6550, 11500, 23000]
+					},
+					{
+						label               : 'Fronting',
+						backgroundColor     : 'blue',
+						borderColor         : 'blue',
+						pointRadius         : false,
+						pointColor          : 'blue',
+						pointStrokeColor    : 'blue',
+						pointHighlightFill  : 'blue',
+						pointHighlightStroke: 'blue',
+						data                : JSON.parse(document.querySelector('.fronting_mois').dataset.donnees)//[1500, 1500, 24500, 30000, 60000, 73500, 9500, 10000, 35000, 6550, 11500, 23000]
+					}
+					]
+				}
+				
+				//-------------
+				//- PRIMES / MOIS -
+				//-------------
+				var primesMoisCanvas = $('#primes_mois').get(0).getContext('2d');
+				var primesMoisData = $.extend(true, {}, dataPrimes);
+				var temp0 = dataPrimes.datasets[0];
+				var temp1 = dataPrimes.datasets[1];
+				primesMoisData.datasets[0] = temp1;
+				primesMoisData.datasets[1] = temp0;
+
+				var primesMoisOptions = {
+					responsive              : true,
+					maintainAspectRatio     : false,
+					datasetFill             : false
+				};
+
+
+				//On dessine l'histogramme en batons
+				new Chart(primesMoisCanvas, {
+					type: 'bar',
+					data: primesMoisData,
+					options: primesMoisOptions
+				})
+
+
+
+
+				//--------------
+				//- COMMISSION PAR MOIS -
+				//--------------
+
+				var dataCommissions = {
+					labels  : ['Janv', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc'],
+					datasets: [
+					{
+						label               : 'Commissions encaissées',
+						backgroundColor     : 'gray',
+						borderColor         : 'gray',
+						pointRadius         : false,
+						pointColor          : 'gray',
+						pointStrokeColor    : 'gray',
+						pointHighlightFill  : 'gray',
+						pointHighlightStroke: 'gray',
+						data                : JSON.parse(document.querySelector('.commissions_encaissees_mois').dataset.donnees)//[15000, 2000, 25000, 35000, 65000, 75000, 10000, 15500, 64000, 6550, 12000, 25000]
+					},
+					{
+						label               : 'Commissions nettes',
+						backgroundColor     : 'orange',
+						borderColor         : 'orange',
+						pointRadius         : false,
+						pointColor          : 'orange',
+						pointStrokeColor    : 'orange',
+						pointHighlightFill  : 'orange',
+						pointHighlightStroke: 'orange',
+						data                : JSON.parse(document.querySelector('.commissions_nettes_mois').dataset.donnees)//[1500, 1500, 24500, 30000, 60000, 73500, 9500, 10000, 35000, 6550, 11500, 23000]
+					},
+					{
+						label               : 'Commissions impayées',
+						backgroundColor     : 'red',
+						borderColor         : 'red',
+						pointRadius         : false,
+						pointColor          : 'red',
+						pointStrokeColor    : 'red',
+						pointHighlightFill  : 'red',
+						pointHighlightStroke: 'red',
+						data                : JSON.parse(document.querySelector('.commissions_impayees_mois').dataset.donnees) //[13500, 500, 500, 5000, 5000, 1500, 500, 5500, 29000, 0, 500, 2000]
+					},
+					]
+				}
+				
+						
+				//-------------
+				//- BAR CHART -
+				//-------------
+				var commissionsMoisCanvas = $('#commission_nette_mois').get(0).getContext('2d');
+				var commissionsMoisData = $.extend(true, {}, dataCommissions);
+				var temp0 = dataCommissions.datasets[0];
+				var temp1 = dataCommissions.datasets[1];
+				commissionsMoisData.datasets[0] = temp1;
+				commissionsMoisData.datasets[1] = temp0;
+
+				var barChartOptions = {
+					responsive              : true,
+					maintainAspectRatio     : false,
+					datasetFill             : false
+				};
+
+				//On dessine l'histogramme en batons
+				new Chart(commissionsMoisCanvas, {
+					type: 'bar',
+					data: commissionsMoisData,
+					options: barChartOptions
+				})
+
+				
+
+
+
+
+			/*
+				* COMMISSIONS NETTES PAR ASSUREUR
+				* -----------
+				*/
+
+				var data_primes_assureur = JSON.parse(document.querySelector('.primes_assureur').dataset.donnees);
+				$.plot('#primes_assureur', data_primes_assureur, {
+					series: {
+					pie: {
+						show       : true,
+						radius     : 1,
+						innerRadius: 0.3, //Boule blanche au centre du diagramme
+						label      : {
+						show     : true,
+						radius   : 2 / 3,
+						formatter: labelFormatter,
+						threshold: 0.01
+						}
+					}
+					},
+					legend: {
+					show: false
+					}
+				})
+
+				/*
+				* COMMISSIONS NETTES PAR ASSUREUR
+				* -----------
+				*/
+
+				var data_commissions_nettes_assureur = JSON.parse(document.querySelector('.commissions_nettes_assureur').dataset.donnees);
+				$.plot('#commissions_nettes_assureur', data_commissions_nettes_assureur, {
+					series: {
+					pie: {
+						show       : true,
+						radius     : 1,
+						innerRadius: 0.3, //Boule blanche au centre du diagramme
+						label      : {
+						show     : true,
+						radius   : 2 / 3,
+						formatter: labelFormatter,
+						threshold: 0.01
+						}
+					}
+					},
+					legend: {
+					show: false
+					}
+				})
+
+				/*
+				* COMMISSIONS IMPAYEES PAR ASSUREUR
+				* -----------
+				*/
+
+				var data_commissions_impayees_assureur = JSON.parse(document.querySelector('.commissions_impayees_assureur').dataset.donnees);
+				$.plot('#commissions_impayees_assureur', data_commissions_impayees_assureur, {
+					series: {
+					pie: {
+						show       : true,
+						radius     : 1,
+						innerRadius: 0.3, //Boule blanche au centre du diagramme
+						label      : {
+						show     : true,
+						radius   : 2 / 3,
+						formatter: labelFormatter,
+						threshold: 0.01
+						}
+					}
+					},
+					legend: {
+					show: false
+					}
+				})
+
+
+
+				
+				
+
+				});
+				/*
+				* Custom Label formatter
+				* ----------------------
+				*/
+				function labelFormatter(label, series) {
+				return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
+					+ label
+					+ '<br>(' + Math.round(series.percent) + '%)</div>'
+				}
+
+
+
+
+
+			</script>
+		{% endblock %}
+
+		
+
+	</body>
+</html>

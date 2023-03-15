@@ -1,0 +1,52 @@
+{% extends "template.ui.html.twig" %}
+
+{% block classeActiveListe %}active{% endblock %}
+{% block classeOpenListe %}menu-open{% endblock %}
+{% block classeActiveListeClients %}active{% endblock %}
+
+{% block appTitreRubrique %}
+	<i class="fa-solid fa-people-roof"></i>
+	{{appTitreRubrique}}
+{% endblock %}
+
+{% block appCorps %}
+	{{ form_start(form, {'attr': {'novalidate':'novalidate'}}) }}
+	<div class="container">
+		<div class="card">
+			<h5 class="card-header">Information générale</h5>
+			<div class="card-body">
+				<p class="card-text">
+					<div class="row">
+						<div class="col-sm">{{ form_row(form.nom) }}</div>
+						<div class="col-sm">{{ form_row(form.secteur) }}</div>
+						<div class="col-sm">{{ form_row(form.email) }}</div>
+						<div class="col-sm">{{ form_row(form.telephone) }}</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">{{ form_row(form.adresse) }}</div>
+						<div class="col-sm">{{ form_row(form.siteweb) }}</div>
+						<div class="col-sm">{{ form_row(form.ispersonnemorale) }}</div>
+						<div class="col-sm">{{ form_row(form.rccm) }}</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">{{ form_row(form.idnat) }}</div>
+						<div class="col-sm">{{ form_row(form.numipot) }}</div>
+						<div class="col-sm">{{ form_row(form.entreprise) }}</div>
+						<div class="col-sm"></div>
+					</div>
+				</p>
+				<p class="card-text">
+					{{ form_rest(form) }}
+				</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	<script>
+		$(document).ready(function () {
+$('.select2').select2();
+});
+	</script>
+{% endblock %}
