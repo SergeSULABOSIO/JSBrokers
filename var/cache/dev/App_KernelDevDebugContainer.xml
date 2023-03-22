@@ -341,12 +341,257 @@
     <service id="App\Entity" class="App\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
+    <service id="App\Agregats\OutstandingCommissionAgregat" class="App\Agregats\OutstandingCommissionAgregat" autowire="true" autoconfigure="true"/>
+    <service id="App\Agregats\OutstandingRetroCommissionAgregat" class="App\Agregats\OutstandingRetroCommissionAgregat" autowire="true" autoconfigure="true"/>
+    <service id="App\Agregats\OutstandingTaxeAgregat" class="App\Agregats\OutstandingTaxeAgregat" autowire="true" autoconfigure="true"/>
+    <service id="App\Agregats\PoliceAgregat" class="App\Agregats\PoliceAgregat" autowire="true" autoconfigure="true"/>
+    <service id="App\Agregats\PoliceAgregatCalculator" class="App\Agregats\PoliceAgregatCalculator" autowire="true" autoconfigure="true"/>
+    <service id="App\Agregats\PopCommissionAgregat" class="App\Agregats\PopCommissionAgregat" autowire="true" autoconfigure="true"/>
+    <service id="App\Agregats\PopPartenaireAgregat" class="App\Agregats\PopPartenaireAgregat" autowire="true" autoconfigure="true"/>
+    <service id="App\Agregats\PopTaxeAgregat" class="App\Agregats\PopTaxeAgregat" autowire="true" autoconfigure="true"/>
+    <service id="App\Agregats\TableauDeBord" class="App\Agregats\TableauDeBord" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\AssureurController" class="App\Controller\AssureurController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\AssureurController"/>
+      </call>
+    </service>
+    <service id="App\Controller\AutomobileController" class="App\Controller\AutomobileController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\AutomobileController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ClientController" class="App\Controller\ClientController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\ClientController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ContactController" class="App\Controller\ContactController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\ContactController"/>
+      </call>
+    </service>
+    <service id="App\Controller\DashboardController" class="App\Controller\DashboardController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\DashboardController"/>
+      </call>
+    </service>
+    <service id="App\Controller\EntrepriseController" class="App\Controller\EntrepriseController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\EntrepriseController"/>
+      </call>
+    </service>
+    <service id="App\Controller\MonnaieController" class="App\Controller\MonnaieController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\MonnaieController"/>
+      </call>
+    </service>
+    <service id="App\Controller\OutstandingCommissionController" class="App\Controller\OutstandingCommissionController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\OutstandingCommissionController"/>
+      </call>
+    </service>
+    <service id="App\Controller\OutstandingRetroComController" class="App\Controller\OutstandingRetroComController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\OutstandingRetroComController"/>
+      </call>
+    </service>
+    <service id="App\Controller\OutstandingTaxeController" class="App\Controller\OutstandingTaxeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\OutstandingTaxeController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PaiementCommissionController" class="App\Controller\PaiementCommissionController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\PaiementCommissionController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PaiementPartenaireController" class="App\Controller\PaiementPartenaireController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\PaiementPartenaireController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PaiementTaxeController" class="App\Controller\PaiementTaxeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\PaiementTaxeController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PartenaireController" class="App\Controller\PartenaireController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\PartenaireController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PoliceController" class="App\Controller\PoliceController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\PoliceController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ProduitController" class="App\Controller\ProduitController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\ProduitController"/>
+      </call>
+    </service>
+    <service id="App\Controller\TaxeController" class="App\Controller\TaxeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\TaxeController"/>
+      </call>
+    </service>
     <service id="App\Controller\TestController" class="App\Controller\TestController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.CshazM0.App\Controller\TestController"/>
       </call>
+    </service>
+    <service id="App\DataFixtures\BDMFixture" class="App\DataFixtures\BDMFixture" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\AssureurFormType" class="App\Form\AssureurFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\AssureurSearchType" class="App\Form\AssureurSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\AutomobileFormType" class="App\Form\AutomobileFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\AutomobileSearchType" class="App\Form\AutomobileSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\ClientFormType" class="App\Form\ClientFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ClientSearchType" class="App\Form\ClientSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\ContactFormType" class="App\Form\ContactFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ContactSearchType" class="App\Form\ContactSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\EntrepriseFormType" class="App\Form\EntrepriseFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\EntrepriseSearchType" class="App\Form\EntrepriseSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\MonnaieFormType" class="App\Form\MonnaieFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\MonnaieSearchType" class="App\Form\MonnaieSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\PaiementCommissionFormType" class="App\Form\PaiementCommissionFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\PaiementCommissionSearchType" class="App\Form\PaiementCommissionSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\PaiementPartenaireFormType" class="App\Form\PaiementPartenaireFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\PaiementPartenaireSearchType" class="App\Form\PaiementPartenaireSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\PaiementTaxeFormType" class="App\Form\PaiementTaxeFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\PaiementTaxeSearchType" class="App\Form\PaiementTaxeSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\PartenaireFormType" class="App\Form\PartenaireFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\PartenaireSearchType" class="App\Form\PartenaireSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\PoliceFormType" class="App\Form\PoliceFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\PoliceSearchType" class="App\Form\PoliceSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\ProduitFromType" class="App\Form\ProduitFromType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ProduitSearchType" class="App\Form\ProduitSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\TaxeFormType" class="App\Form\TaxeFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\TaxeSearchType" class="App\Form\TaxeSearchType" autowire="true" autoconfigure="true"/>
+    <service id="App\Outstanding\CommissionOutstanding" class="App\Outstanding\CommissionOutstanding" autowire="true" autoconfigure="true"/>
+    <service id="App\Outstanding\RetrocomOutstanding" class="App\Outstanding\RetrocomOutstanding" autowire="true" autoconfigure="true"/>
+    <service id="App\Outstanding\TaxeOutstanding" class="App\Outstanding\TaxeOutstanding" autowire="true" autoconfigure="true"/>
+    <service id="App\Repository\AssureurRepository" class="App\Repository\AssureurRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\AutomobileRepository" class="App\Repository\AutomobileRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\EntrepriseRepository" class="App\Repository\EntrepriseRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\MonnaieRepository" class="App\Repository\MonnaieRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\OutstandingCommissionRepository" class="App\Repository\OutstandingCommissionRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="App\Repository\PoliceRepository"/>
+      <argument type="service" id="App\Repository\PaiementCommissionRepository"/>
+    </service>
+    <service id="App\Repository\PaiementCommissionRepository" class="App\Repository\PaiementCommissionRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\PaiementPartenaireRepository" class="App\Repository\PaiementPartenaireRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\PaiementTaxeRepository" class="App\Repository\PaiementTaxeRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\PartenaireRepository" class="App\Repository\PartenaireRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\PoliceRepository" class="App\Repository\PoliceRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ProduitRepository" class="App\Repository\ProduitRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\SecteurRepository" class="App\Repository\SecteurRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\TaxeRepository" class="App\Repository\TaxeRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
@@ -1192,9 +1437,23 @@
       <argument type="service" id="form.registry"/>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\AssureurFormType</argument>
+        <argument>App\Form\AutomobileFormType</argument>
+        <argument>App\Form\ClientFormType</argument>
+        <argument>App\Form\ContactFormType</argument>
+        <argument>App\Form\EntrepriseFormType</argument>
+        <argument>App\Form\MonnaieFormType</argument>
+        <argument>App\Form\PaiementCommissionFormType</argument>
+        <argument>App\Form\PaiementPartenaireFormType</argument>
+        <argument>App\Form\PaiementTaxeFormType</argument>
+        <argument>App\Form\PartenaireFormType</argument>
+        <argument>App\Form\PoliceFormType</argument>
+        <argument>App\Form\ProduitFromType</argument>
+        <argument>App\Form\TaxeFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -3285,7 +3544,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.y4dplYt"/>
+      <argument type="service" id=".service_locator.ir4MkUQ"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4190,7 +4449,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.Xbsa8iG"/>
+      <argument type="service" id=".service_locator.kTaFUGs"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6166,9 +6425,116 @@
         <argument key="_default" type="service_closure" id="webpack_encore.entrypoint_lookup[_default]"/>
       </argument>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AssureurController" class="App\Controller\AssureurController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AssureurController" class="App\Controller\AssureurController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AssureurController" class="App\Controller\AssureurController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AutomobileController" class="App\Controller\AutomobileController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AutomobileController" class="App\Controller\AutomobileController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AutomobileController" class="App\Controller\AutomobileController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EntrepriseController" class="App\Controller\EntrepriseController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EntrepriseController" class="App\Controller\EntrepriseController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\EntrepriseController" class="App\Controller\EntrepriseController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MonnaieController" class="App\Controller\MonnaieController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MonnaieController" class="App\Controller\MonnaieController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\MonnaieController" class="App\Controller\MonnaieController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\OutstandingCommissionController" class="App\Controller\OutstandingCommissionController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\OutstandingCommissionController" class="App\Controller\OutstandingCommissionController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\OutstandingCommissionController" class="App\Controller\OutstandingCommissionController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\OutstandingRetroComController" class="App\Controller\OutstandingRetroComController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\OutstandingRetroComController" class="App\Controller\OutstandingRetroComController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\OutstandingRetroComController" class="App\Controller\OutstandingRetroComController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\OutstandingTaxeController" class="App\Controller\OutstandingTaxeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\OutstandingTaxeController" class="App\Controller\OutstandingTaxeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\OutstandingTaxeController" class="App\Controller\OutstandingTaxeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PaiementCommissionController" class="App\Controller\PaiementCommissionController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PaiementCommissionController" class="App\Controller\PaiementCommissionController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PaiementCommissionController" class="App\Controller\PaiementCommissionController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PaiementPartenaireController" class="App\Controller\PaiementPartenaireController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PaiementPartenaireController" class="App\Controller\PaiementPartenaireController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PaiementPartenaireController" class="App\Controller\PaiementPartenaireController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PaiementTaxeController" class="App\Controller\PaiementTaxeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PaiementTaxeController" class="App\Controller\PaiementTaxeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PaiementTaxeController" class="App\Controller\PaiementTaxeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PartenaireController" class="App\Controller\PartenaireController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PartenaireController" class="App\Controller\PartenaireController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PartenaireController" class="App\Controller\PartenaireController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PoliceController" class="App\Controller\PoliceController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PoliceController" class="App\Controller\PoliceController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PoliceController" class="App\Controller\PoliceController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TaxeController" class="App\Controller\TaxeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TaxeController" class="App\Controller\TaxeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\TaxeController" class="App\Controller\TaxeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TestController" class="App\Controller\TestController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TestController" class="App\Controller\TestController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TestController" class="App\Controller\TestController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AssureurFormType" class="App\Form\AssureurFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AssureurFormType" class="App\Form\AssureurFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AutomobileFormType" class="App\Form\AutomobileFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AutomobileFormType" class="App\Form\AutomobileFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ClientFormType" class="App\Form\ClientFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ClientFormType" class="App\Form\ClientFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactFormType" class="App\Form\ContactFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ContactFormType" class="App\Form\ContactFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EntrepriseFormType" class="App\Form\EntrepriseFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\EntrepriseFormType" class="App\Form\EntrepriseFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MonnaieFormType" class="App\Form\MonnaieFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\MonnaieFormType" class="App\Form\MonnaieFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PaiementCommissionFormType" class="App\Form\PaiementCommissionFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\PaiementCommissionFormType" class="App\Form\PaiementCommissionFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PaiementPartenaireFormType" class="App\Form\PaiementPartenaireFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\PaiementPartenaireFormType" class="App\Form\PaiementPartenaireFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PaiementTaxeFormType" class="App\Form\PaiementTaxeFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\PaiementTaxeFormType" class="App\Form\PaiementTaxeFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PartenaireFormType" class="App\Form\PartenaireFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\PartenaireFormType" class="App\Form\PartenaireFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PoliceFormType" class="App\Form\PoliceFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\PoliceFormType" class="App\Form\PoliceFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProduitFromType" class="App\Form\ProduitFromType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ProduitFromType" class="App\Form\ProduitFromType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\TaxeFormType" class="App\Form\TaxeFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\TaxeFormType" class="App\Form\TaxeFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AssureurRepository" class="App\Repository\AssureurRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\AssureurRepository" class="App\Repository\AssureurRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AutomobileRepository" class="App\Repository\AutomobileRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\AutomobileRepository" class="App\Repository\AutomobileRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EntrepriseRepository" class="App\Repository\EntrepriseRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\EntrepriseRepository" class="App\Repository\EntrepriseRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MonnaieRepository" class="App\Repository\MonnaieRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\MonnaieRepository" class="App\Repository\MonnaieRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OutstandingCommissionRepository" class="App\Repository\OutstandingCommissionRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\OutstandingCommissionRepository" class="App\Repository\OutstandingCommissionRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PaiementCommissionRepository" class="App\Repository\PaiementCommissionRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\PaiementCommissionRepository" class="App\Repository\PaiementCommissionRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PaiementPartenaireRepository" class="App\Repository\PaiementPartenaireRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\PaiementPartenaireRepository" class="App\Repository\PaiementPartenaireRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PaiementTaxeRepository" class="App\Repository\PaiementTaxeRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\PaiementTaxeRepository" class="App\Repository\PaiementTaxeRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PartenaireRepository" class="App\Repository\PartenaireRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\PartenaireRepository" class="App\Repository\PartenaireRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PoliceRepository" class="App\Repository\PoliceRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\PoliceRepository" class="App\Repository\PoliceRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProduitRepository" class="App\Repository\ProduitRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProduitRepository" class="App\Repository\ProduitRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SecteurRepository" class="App\Repository\SecteurRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\SecteurRepository" class="App\Repository\SecteurRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\TaxeRepository" class="App\Repository\TaxeRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\TaxeRepository" class="App\Repository\TaxeRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.7nzbL4K" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6506,13 +6872,442 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
-    <service id=".service_locator.HBdvAhp" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.VITqPQe" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".service_locator.noTMDIY" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".errored.WEcWtot" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.CId22Pw" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="assureurRepository" type="service_closure" id="App\Repository\AssureurRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.WEcWtot"/>
+      </argument>
+    </service>
+    <service id=".errored.hHpLyxr" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.OTS.kOY" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="automobileRepository" type="service_closure" id="App\Repository\AutomobileRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.hHpLyxr"/>
+      </argument>
+    </service>
+    <service id=".service_locator.tGi_ZCy" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.DMtisKo" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".errored.8LQ5snj" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.MelprW7" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.8LQ5snj"/>
+      </argument>
+    </service>
+    <service id=".service_locator.RuOUwvF" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.aN8RMxB" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".errored.f_idLoG" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.9DIBXgX" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="contactRepository" type="service_closure" id="App\Repository\ContactRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.f_idLoG"/>
+      </argument>
+    </service>
+    <service id=".service_locator.NlHj3sO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.ppcqDMN" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".service_locator.oyolLkW" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="assureurRepository" type="service_closure" id="App\Repository\AssureurRepository"/>
+        <argument key="automobileRepository" type="service_closure" id="App\Repository\AutomobileRepository"/>
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="contactRepository" type="service_closure" id="App\Repository\ContactRepository"/>
+        <argument key="entrepriseRepository" type="service_closure" id="App\Repository\EntrepriseRepository"/>
+        <argument key="monnaieRepository" type="service_closure" id="App\Repository\MonnaieRepository"/>
+        <argument key="outstandingCommissionRepository" type="service_closure" id="App\Repository\OutstandingCommissionRepository"/>
+        <argument key="paiementCommissionRepository" type="service_closure" id="App\Repository\PaiementCommissionRepository"/>
+        <argument key="paiementPartenaireRepository" type="service_closure" id="App\Repository\PaiementPartenaireRepository"/>
+        <argument key="paiementTaxeRepository" type="service_closure" id="App\Repository\PaiementTaxeRepository"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+        <argument key="produitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="taxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
+    </service>
+    <service id=".errored.kB2PJwn" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.LwFJmem" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entrepriseRepository" type="service_closure" id="App\Repository\EntrepriseRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.kB2PJwn"/>
+      </argument>
+    </service>
+    <service id=".service_locator.kTJVJoA" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.ECtO19P" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".errored.eD2Z7VW" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.fQrwz4e" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="monnaieRepository" type="service_closure" id="App\Repository\MonnaieRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.eD2Z7VW"/>
+      </argument>
+    </service>
+    <service id=".service_locator.HrURxP6" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.rnqxSmX" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".errored.3RSg63L" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.04cYyeh" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="assureurRepository" type="service_closure" id="App\Repository\AssureurRepository"/>
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="outstandingCommissionRepository" type="service_closure" id="App\Repository\OutstandingCommissionRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.3RSg63L"/>
+        <argument key="paiementCommissionRepository" type="service_closure" id="App\Repository\PaiementCommissionRepository"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+        <argument key="produitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="taxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
+    </service>
+    <service id=".errored.OzKdbUK" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.7Lh_Y4t" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="assureurRepository" type="service_closure" id="App\Repository\AssureurRepository"/>
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.OzKdbUK"/>
+        <argument key="paiementCommissionRepository" type="service_closure" id="App\Repository\PaiementCommissionRepository"/>
+        <argument key="paiementPartenaireRepository" type="service_closure" id="App\Repository\PaiementPartenaireRepository"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+        <argument key="produitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="taxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
+    </service>
+    <service id=".errored.PaRMZs6" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.ije91yB" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="assureurRepository" type="service_closure" id="App\Repository\AssureurRepository"/>
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.PaRMZs6"/>
+        <argument key="paiementCommissionRepository" type="service_closure" id="App\Repository\PaiementCommissionRepository"/>
+        <argument key="paiementTaxeRepository" type="service_closure" id="App\Repository\PaiementTaxeRepository"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+        <argument key="produitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="taxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
+    </service>
+    <service id=".errored.Yt6tazl" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.Hg2CPyV" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginatorInterface" type="service_closure" id=".errored.Yt6tazl"/>
+        <argument key="paiementCommissionRepository" type="service_closure" id="App\Repository\PaiementCommissionRepository"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.GhZ7MAv" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.eO6lMIj" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".service_locator.Z8ltwTO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+        <argument key="monnaieRepository" type="service_closure" id="App\Repository\MonnaieRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+      </argument>
+    </service>
+    <service id=".errored.n8v95EP" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.3b5fRBX" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.n8v95EP"/>
+        <argument key="paiementPartenaireRepository" type="service_closure" id="App\Repository\PaiementPartenaireRepository"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.._chpMt" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.XH7AHhZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".service_locator.f.rqAc_" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+        <argument key="monnaieRepository" type="service_closure" id="App\Repository\MonnaieRepository"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+      </argument>
+    </service>
+    <service id=".errored.mgpQLgg" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.vmRITjz" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginatorInterface" type="service_closure" id=".errored.mgpQLgg"/>
+        <argument key="paiementTaxeRepository" type="service_closure" id="App\Repository\PaiementTaxeRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+        <argument key="taxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.AKV1fEm" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.Yf.8DU_" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".service_locator..YQzmqr" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+        <argument key="monnaieRepository" type="service_closure" id="App\Repository\MonnaieRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+        <argument key="taxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
+    </service>
+    <service id=".errored.M7vHCEi" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.7syGRnM" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginatorInterface" type="service_closure" id=".errored.M7vHCEi"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.G20oUMG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.IY3obv4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".errored.j4Fh4Ri" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.Rn8aBho" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="assureurRepository" type="service_closure" id="App\Repository\AssureurRepository"/>
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="paginatorInterface" type="service_closure" id=".errored.j4Fh4Ri"/>
+        <argument key="partenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="policeRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+        <argument key="produitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="taxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.CDcc9Ed" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.LXd6Syq" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".errored.IlKQhpn" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.lgVQ4lk" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginatorInterface" type="service_closure" id=".errored.IlKQhpn"/>
+        <argument key="produitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.f.mb6sw" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.MhTTffb" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".errored.fNn_MYj" class="Knp\Component\Pager\PaginatorInterface"/>
+    <service id=".service_locator.eJsBwxT" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginatorInterface" type="service_closure" id=".errored.fNn_MYj"/>
+        <argument key="taxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.IiT35d8" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.eGNsd6t" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+      </argument>
+    </service>
+    <service id=".service_locator.Tz1goQS" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\AssureurController::delete" type="service_closure" id=".service_locator.VITqPQe"/>
+        <argument key="App\Controller\AssureurController::edit" type="service_closure" id=".service_locator.VITqPQe"/>
+        <argument key="App\Controller\AssureurController::list" type="service_closure" id=".service_locator.CId22Pw"/>
+        <argument key="App\Controller\AutomobileController::delete" type="service_closure" id=".service_locator.DMtisKo"/>
+        <argument key="App\Controller\AutomobileController::edit" type="service_closure" id=".service_locator.DMtisKo"/>
+        <argument key="App\Controller\AutomobileController::list" type="service_closure" id=".service_locator.OTS.kOY"/>
+        <argument key="App\Controller\ClientController::delete" type="service_closure" id=".service_locator.aN8RMxB"/>
+        <argument key="App\Controller\ClientController::edit" type="service_closure" id=".service_locator.aN8RMxB"/>
+        <argument key="App\Controller\ClientController::search" type="service_closure" id=".service_locator.MelprW7"/>
+        <argument key="App\Controller\ContactController::delete" type="service_closure" id=".service_locator.ppcqDMN"/>
+        <argument key="App\Controller\ContactController::edit" type="service_closure" id=".service_locator.ppcqDMN"/>
+        <argument key="App\Controller\ContactController::list" type="service_closure" id=".service_locator.9DIBXgX"/>
+        <argument key="App\Controller\DashboardController::index" type="service_closure" id=".service_locator.oyolLkW"/>
+        <argument key="App\Controller\EntrepriseController::delete" type="service_closure" id=".service_locator.ECtO19P"/>
+        <argument key="App\Controller\EntrepriseController::edit" type="service_closure" id=".service_locator.ECtO19P"/>
+        <argument key="App\Controller\EntrepriseController::list" type="service_closure" id=".service_locator.LwFJmem"/>
+        <argument key="App\Controller\MonnaieController::delete" type="service_closure" id=".service_locator.rnqxSmX"/>
+        <argument key="App\Controller\MonnaieController::edit" type="service_closure" id=".service_locator.rnqxSmX"/>
+        <argument key="App\Controller\MonnaieController::list" type="service_closure" id=".service_locator.fQrwz4e"/>
+        <argument key="App\Controller\OutstandingCommissionController::index" type="service_closure" id=".service_locator.04cYyeh"/>
+        <argument key="App\Controller\OutstandingRetroComController::index" type="service_closure" id=".service_locator.7Lh_Y4t"/>
+        <argument key="App\Controller\OutstandingTaxeController::index" type="service_closure" id=".service_locator.ije91yB"/>
+        <argument key="App\Controller\PaiementCommissionController::delete" type="service_closure" id=".service_locator.eO6lMIj"/>
+        <argument key="App\Controller\PaiementCommissionController::deposit" type="service_closure" id=".service_locator.Z8ltwTO"/>
+        <argument key="App\Controller\PaiementCommissionController::edit" type="service_closure" id=".service_locator.eO6lMIj"/>
+        <argument key="App\Controller\PaiementCommissionController::list" type="service_closure" id=".service_locator.Hg2CPyV"/>
+        <argument key="App\Controller\PaiementPartenaireController::delete" type="service_closure" id=".service_locator.XH7AHhZ"/>
+        <argument key="App\Controller\PaiementPartenaireController::deposit" type="service_closure" id=".service_locator.f.rqAc_"/>
+        <argument key="App\Controller\PaiementPartenaireController::edit" type="service_closure" id=".service_locator.XH7AHhZ"/>
+        <argument key="App\Controller\PaiementPartenaireController::list" type="service_closure" id=".service_locator.3b5fRBX"/>
+        <argument key="App\Controller\PaiementTaxeController::delete" type="service_closure" id=".service_locator.Yf.8DU_"/>
+        <argument key="App\Controller\PaiementTaxeController::deposit" type="service_closure" id=".service_locator..YQzmqr"/>
+        <argument key="App\Controller\PaiementTaxeController::edit" type="service_closure" id=".service_locator.Yf.8DU_"/>
+        <argument key="App\Controller\PaiementTaxeController::list" type="service_closure" id=".service_locator.vmRITjz"/>
+        <argument key="App\Controller\PartenaireController::delete" type="service_closure" id=".service_locator.IY3obv4"/>
+        <argument key="App\Controller\PartenaireController::edit" type="service_closure" id=".service_locator.IY3obv4"/>
+        <argument key="App\Controller\PartenaireController::list" type="service_closure" id=".service_locator.7syGRnM"/>
+        <argument key="App\Controller\PoliceController::delete" type="service_closure" id=".service_locator.LXd6Syq"/>
+        <argument key="App\Controller\PoliceController::edit" type="service_closure" id=".service_locator.LXd6Syq"/>
+        <argument key="App\Controller\PoliceController::list" type="service_closure" id=".service_locator.Rn8aBho"/>
+        <argument key="App\Controller\ProduitController::delete" type="service_closure" id=".service_locator.MhTTffb"/>
+        <argument key="App\Controller\ProduitController::edit" type="service_closure" id=".service_locator.MhTTffb"/>
+        <argument key="App\Controller\ProduitController::list" type="service_closure" id=".service_locator.lgVQ4lk"/>
+        <argument key="App\Controller\TaxeController::delete" type="service_closure" id=".service_locator.eGNsd6t"/>
+        <argument key="App\Controller\TaxeController::edit" type="service_closure" id=".service_locator.eGNsd6t"/>
+        <argument key="App\Controller\TaxeController::list" type="service_closure" id=".service_locator.eJsBwxT"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
+        <argument key="App\Controller\AssureurController:delete" type="service_closure" id=".service_locator.VITqPQe"/>
+        <argument key="App\Controller\AssureurController:edit" type="service_closure" id=".service_locator.VITqPQe"/>
+        <argument key="App\Controller\AssureurController:list" type="service_closure" id=".service_locator.CId22Pw"/>
+        <argument key="App\Controller\AutomobileController:delete" type="service_closure" id=".service_locator.DMtisKo"/>
+        <argument key="App\Controller\AutomobileController:edit" type="service_closure" id=".service_locator.DMtisKo"/>
+        <argument key="App\Controller\AutomobileController:list" type="service_closure" id=".service_locator.OTS.kOY"/>
+        <argument key="App\Controller\ClientController:delete" type="service_closure" id=".service_locator.aN8RMxB"/>
+        <argument key="App\Controller\ClientController:edit" type="service_closure" id=".service_locator.aN8RMxB"/>
+        <argument key="App\Controller\ClientController:search" type="service_closure" id=".service_locator.MelprW7"/>
+        <argument key="App\Controller\ContactController:delete" type="service_closure" id=".service_locator.ppcqDMN"/>
+        <argument key="App\Controller\ContactController:edit" type="service_closure" id=".service_locator.ppcqDMN"/>
+        <argument key="App\Controller\ContactController:list" type="service_closure" id=".service_locator.9DIBXgX"/>
+        <argument key="App\Controller\DashboardController:index" type="service_closure" id=".service_locator.oyolLkW"/>
+        <argument key="App\Controller\EntrepriseController:delete" type="service_closure" id=".service_locator.ECtO19P"/>
+        <argument key="App\Controller\EntrepriseController:edit" type="service_closure" id=".service_locator.ECtO19P"/>
+        <argument key="App\Controller\EntrepriseController:list" type="service_closure" id=".service_locator.LwFJmem"/>
+        <argument key="App\Controller\MonnaieController:delete" type="service_closure" id=".service_locator.rnqxSmX"/>
+        <argument key="App\Controller\MonnaieController:edit" type="service_closure" id=".service_locator.rnqxSmX"/>
+        <argument key="App\Controller\MonnaieController:list" type="service_closure" id=".service_locator.fQrwz4e"/>
+        <argument key="App\Controller\OutstandingCommissionController:index" type="service_closure" id=".service_locator.04cYyeh"/>
+        <argument key="App\Controller\OutstandingRetroComController:index" type="service_closure" id=".service_locator.7Lh_Y4t"/>
+        <argument key="App\Controller\OutstandingTaxeController:index" type="service_closure" id=".service_locator.ije91yB"/>
+        <argument key="App\Controller\PaiementCommissionController:delete" type="service_closure" id=".service_locator.eO6lMIj"/>
+        <argument key="App\Controller\PaiementCommissionController:deposit" type="service_closure" id=".service_locator.Z8ltwTO"/>
+        <argument key="App\Controller\PaiementCommissionController:edit" type="service_closure" id=".service_locator.eO6lMIj"/>
+        <argument key="App\Controller\PaiementCommissionController:list" type="service_closure" id=".service_locator.Hg2CPyV"/>
+        <argument key="App\Controller\PaiementPartenaireController:delete" type="service_closure" id=".service_locator.XH7AHhZ"/>
+        <argument key="App\Controller\PaiementPartenaireController:deposit" type="service_closure" id=".service_locator.f.rqAc_"/>
+        <argument key="App\Controller\PaiementPartenaireController:edit" type="service_closure" id=".service_locator.XH7AHhZ"/>
+        <argument key="App\Controller\PaiementPartenaireController:list" type="service_closure" id=".service_locator.3b5fRBX"/>
+        <argument key="App\Controller\PaiementTaxeController:delete" type="service_closure" id=".service_locator.Yf.8DU_"/>
+        <argument key="App\Controller\PaiementTaxeController:deposit" type="service_closure" id=".service_locator..YQzmqr"/>
+        <argument key="App\Controller\PaiementTaxeController:edit" type="service_closure" id=".service_locator.Yf.8DU_"/>
+        <argument key="App\Controller\PaiementTaxeController:list" type="service_closure" id=".service_locator.vmRITjz"/>
+        <argument key="App\Controller\PartenaireController:delete" type="service_closure" id=".service_locator.IY3obv4"/>
+        <argument key="App\Controller\PartenaireController:edit" type="service_closure" id=".service_locator.IY3obv4"/>
+        <argument key="App\Controller\PartenaireController:list" type="service_closure" id=".service_locator.7syGRnM"/>
+        <argument key="App\Controller\PoliceController:delete" type="service_closure" id=".service_locator.LXd6Syq"/>
+        <argument key="App\Controller\PoliceController:edit" type="service_closure" id=".service_locator.LXd6Syq"/>
+        <argument key="App\Controller\PoliceController:list" type="service_closure" id=".service_locator.Rn8aBho"/>
+        <argument key="App\Controller\ProduitController:delete" type="service_closure" id=".service_locator.MhTTffb"/>
+        <argument key="App\Controller\ProduitController:edit" type="service_closure" id=".service_locator.MhTTffb"/>
+        <argument key="App\Controller\ProduitController:list" type="service_closure" id=".service_locator.lgVQ4lk"/>
+        <argument key="App\Controller\TaxeController:delete" type="service_closure" id=".service_locator.eGNsd6t"/>
+        <argument key="App\Controller\TaxeController:edit" type="service_closure" id=".service_locator.eGNsd6t"/>
+        <argument key="App\Controller\TaxeController:list" type="service_closure" id=".service_locator.eJsBwxT"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
       </argument>
@@ -6687,9 +7482,22 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.y4dplYt" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ir4MkUQ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\AssureurFormType" type="service_closure" id="App\Form\AssureurFormType"/>
+        <argument key="App\Form\AutomobileFormType" type="service_closure" id="App\Form\AutomobileFormType"/>
+        <argument key="App\Form\ClientFormType" type="service_closure" id="App\Form\ClientFormType"/>
+        <argument key="App\Form\ContactFormType" type="service_closure" id="App\Form\ContactFormType"/>
+        <argument key="App\Form\EntrepriseFormType" type="service_closure" id="App\Form\EntrepriseFormType"/>
+        <argument key="App\Form\MonnaieFormType" type="service_closure" id="App\Form\MonnaieFormType"/>
+        <argument key="App\Form\PaiementCommissionFormType" type="service_closure" id="App\Form\PaiementCommissionFormType"/>
+        <argument key="App\Form\PaiementPartenaireFormType" type="service_closure" id="App\Form\PaiementPartenaireFormType"/>
+        <argument key="App\Form\PaiementTaxeFormType" type="service_closure" id="App\Form\PaiementTaxeFormType"/>
+        <argument key="App\Form\PartenaireFormType" type="service_closure" id="App\Form\PartenaireFormType"/>
+        <argument key="App\Form\PoliceFormType" type="service_closure" id="App\Form\PoliceFormType"/>
+        <argument key="App\Form\ProduitFromType" type="service_closure" id="App\Form\ProduitFromType"/>
+        <argument key="App\Form\TaxeFormType" type="service_closure" id="App\Form\TaxeFormType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -6783,9 +7591,25 @@
         <argument key="doctrine.orm.messenger.doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.messenger.doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.Xbsa8iG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.kTaFUGs" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="App\Repository\AssureurRepository" type="service_closure" id="App\Repository\AssureurRepository"/>
+        <argument key="App\Repository\AutomobileRepository" type="service_closure" id="App\Repository\AutomobileRepository"/>
+        <argument key="App\Repository\ClientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+        <argument key="App\Repository\ContactRepository" type="service_closure" id="App\Repository\ContactRepository"/>
+        <argument key="App\Repository\EntrepriseRepository" type="service_closure" id="App\Repository\EntrepriseRepository"/>
+        <argument key="App\Repository\MonnaieRepository" type="service_closure" id="App\Repository\MonnaieRepository"/>
+        <argument key="App\Repository\OutstandingCommissionRepository" type="service_closure" id="App\Repository\OutstandingCommissionRepository"/>
+        <argument key="App\Repository\PaiementCommissionRepository" type="service_closure" id="App\Repository\PaiementCommissionRepository"/>
+        <argument key="App\Repository\PaiementPartenaireRepository" type="service_closure" id="App\Repository\PaiementPartenaireRepository"/>
+        <argument key="App\Repository\PaiementTaxeRepository" type="service_closure" id="App\Repository\PaiementTaxeRepository"/>
+        <argument key="App\Repository\PartenaireRepository" type="service_closure" id="App\Repository\PartenaireRepository"/>
+        <argument key="App\Repository\PoliceRepository" type="service_closure" id="App\Repository\PoliceRepository"/>
+        <argument key="App\Repository\ProduitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="App\Repository\SecteurRepository" type="service_closure" id="App\Repository\SecteurRepository"/>
+        <argument key="App\Repository\TaxeRepository" type="service_closure" id="App\Repository\TaxeRepository"/>
+      </argument>
     </service>
     <service id=".service_locator.KLVvNIq" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
@@ -7049,6 +7873,108 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.CshazM0.App\Controller\AssureurController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AssureurController"/>
+      <argument>App\Controller\AssureurController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\AutomobileController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AutomobileController"/>
+      <argument>App\Controller\AutomobileController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\ClientController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ClientController"/>
+      <argument>App\Controller\ClientController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\ContactController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ContactController"/>
+      <argument>App\Controller\ContactController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\DashboardController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DashboardController"/>
+      <argument>App\Controller\DashboardController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\EntrepriseController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\EntrepriseController"/>
+      <argument>App\Controller\EntrepriseController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\MonnaieController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\MonnaieController"/>
+      <argument>App\Controller\MonnaieController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\OutstandingCommissionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\OutstandingCommissionController"/>
+      <argument>App\Controller\OutstandingCommissionController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\OutstandingRetroComController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\OutstandingRetroComController"/>
+      <argument>App\Controller\OutstandingRetroComController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\OutstandingTaxeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\OutstandingTaxeController"/>
+      <argument>App\Controller\OutstandingTaxeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\PaiementCommissionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PaiementCommissionController"/>
+      <argument>App\Controller\PaiementCommissionController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\PaiementPartenaireController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PaiementPartenaireController"/>
+      <argument>App\Controller\PaiementPartenaireController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\PaiementTaxeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PaiementTaxeController"/>
+      <argument>App\Controller\PaiementTaxeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\PartenaireController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartenaireController"/>
+      <argument>App\Controller\PartenaireController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\PoliceController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PoliceController"/>
+      <argument>App\Controller\PoliceController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\ProduitController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ProduitController"/>
+      <argument>App\Controller\ProduitController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\TaxeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\TaxeController"/>
+      <argument>App\Controller\TaxeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
     <service id=".service_locator.CshazM0.App\Controller\TestController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\TestController"/>
       <argument>App\Controller\TestController</argument>
@@ -7120,6 +8046,10 @@
       <argument type="collection">
         <argument key="reverse_container" type="service_closure" id="reverse_container" on-invalid="ignore_uninitialized"/>
       </argument>
+    </service>
+    <service id=".service_locator.Xbsa8iG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
     </service>
     <service id=".service_locator.NBUFN6A" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
@@ -7328,12 +8258,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.HBdvAhp"/>
+      <argument type="service" id=".service_locator.Tz1goQS"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.HBdvAhp"/>
+      <argument type="service" id=".service_locator.Tz1goQS"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -8308,7 +9238,7 @@
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.HBdvAhp"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.Tz1goQS"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -8330,9 +9260,32 @@
     <service id=".service_locator.h8Jkkd2" alias="messenger.retry_strategy_locator"/>
     <service id=".service_locator.XDGmiR3" alias=".1_ServiceLocator~YRzAAgI"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
-    <service id=".service_locator.L.EDYUC" alias=".service_locator.HBdvAhp"/>
+    <service id=".service_locator.9n.TkzM" alias=".service_locator.oyolLkW"/>
+    <service id=".service_locator.MjizvIf" alias=".service_locator.ECtO19P"/>
+    <service id=".service_locator.7_4CXUo" alias=".service_locator.rnqxSmX"/>
+    <service id=".service_locator.1tq4Sfl" alias=".service_locator.04cYyeh"/>
+    <service id=".service_locator.dt6g6dT" alias=".service_locator.7Lh_Y4t"/>
+    <service id=".service_locator.b216tU7" alias=".service_locator.ije91yB"/>
+    <service id=".service_locator.tzufj9c" alias=".service_locator.Hg2CPyV"/>
+    <service id=".service_locator._9CFZU8" alias=".service_locator.eO6lMIj"/>
+    <service id=".service_locator.WkPbVTY" alias=".service_locator.Z8ltwTO"/>
+    <service id=".service_locator.yZFj82L" alias=".service_locator.3b5fRBX"/>
+    <service id=".service_locator.lzBla.E" alias=".service_locator.XH7AHhZ"/>
+    <service id=".service_locator.ky6_O9M" alias=".service_locator.f.rqAc_"/>
+    <service id=".service_locator.fe3_DjO" alias=".service_locator.vmRITjz"/>
+    <service id=".service_locator.oYpRYIi" alias=".service_locator.Yf.8DU_"/>
+    <service id=".service_locator.97SuZvx" alias=".service_locator..YQzmqr"/>
+    <service id=".service_locator.UVIP4Lh" alias=".service_locator.7syGRnM"/>
+    <service id=".service_locator.fqv1BJz" alias=".service_locator.IY3obv4"/>
+    <service id=".service_locator.Kmlkctv" alias=".service_locator.Rn8aBho"/>
+    <service id=".service_locator.PMj1OL4" alias=".service_locator.LXd6Syq"/>
+    <service id=".service_locator.rmPhbwY" alias=".service_locator.lgVQ4lk"/>
+    <service id=".service_locator.ydwjmFW" alias=".service_locator.MhTTffb"/>
+    <service id=".service_locator.5n2RsGg" alias=".service_locator.eJsBwxT"/>
+    <service id=".service_locator.FTU7aXj" alias=".service_locator.eGNsd6t"/>
+    <service id=".service_locator.QXEhume" alias=".service_locator.Tz1goQS"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
-    <service id=".service_locator.Za9MpXe" alias=".service_locator.y4dplYt"/>
+    <service id=".service_locator.UbsKOcJ" alias=".service_locator.ir4MkUQ"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator.VZoQk0z" alias=".service_locator.CshazM0"/>
@@ -8381,6 +9334,39 @@
     <service id="messenger.bus.default" alias="debug.traced.messenger.bus.default"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
+    <service id=".service_locator.e_FaAbc" alias=".service_locator.VITqPQe"/>
+    <service id=".service_locator.4Temn9F" alias=".service_locator.CId22Pw"/>
+    <service id=".service_locator.dbOAutP" alias=".service_locator.OTS.kOY"/>
+    <service id=".service_locator.lmPow5i" alias=".service_locator.DMtisKo"/>
+    <service id=".service_locator.OD0OscP" alias=".service_locator.MelprW7"/>
+    <service id=".service_locator.yeT3kcU" alias=".service_locator.aN8RMxB"/>
+    <service id=".service_locator.t5OEowM" alias=".service_locator.9DIBXgX"/>
+    <service id=".service_locator.K48A7SM" alias=".service_locator.ppcqDMN"/>
+    <service id=".service_locator.ZZ6Ff1Z" alias=".service_locator.oyolLkW"/>
+    <service id=".service_locator.8_dqAsl" alias=".service_locator.LwFJmem"/>
+    <service id=".service_locator.MaCNcHq" alias=".service_locator.ECtO19P"/>
+    <service id=".service_locator.L3ujeOv" alias=".service_locator.fQrwz4e"/>
+    <service id=".service_locator.xJ5lBjN" alias=".service_locator.rnqxSmX"/>
+    <service id=".service_locator.lOJCASO" alias=".service_locator.04cYyeh"/>
+    <service id=".service_locator.IYj0b2z" alias=".service_locator.7Lh_Y4t"/>
+    <service id=".service_locator.FZkheuB" alias=".service_locator.ije91yB"/>
+    <service id=".service_locator.ATZbuot" alias=".service_locator.Hg2CPyV"/>
+    <service id=".service_locator.14XXsWH" alias=".service_locator.eO6lMIj"/>
+    <service id=".service_locator.0w_E_qu" alias=".service_locator.Z8ltwTO"/>
+    <service id=".service_locator.Kyedh66" alias=".service_locator.3b5fRBX"/>
+    <service id=".service_locator.OGPEB7J" alias=".service_locator.XH7AHhZ"/>
+    <service id=".service_locator.jNmodIg" alias=".service_locator.f.rqAc_"/>
+    <service id=".service_locator.utyrkKE" alias=".service_locator.vmRITjz"/>
+    <service id=".service_locator.xqIovU7" alias=".service_locator.Yf.8DU_"/>
+    <service id=".service_locator.NT3Mn1j" alias=".service_locator..YQzmqr"/>
+    <service id=".service_locator.yeKs4V8" alias=".service_locator.7syGRnM"/>
+    <service id=".service_locator..52MAC_" alias=".service_locator.IY3obv4"/>
+    <service id=".service_locator.DeU_PQC" alias=".service_locator.Rn8aBho"/>
+    <service id=".service_locator.re2rvSM" alias=".service_locator.LXd6Syq"/>
+    <service id=".service_locator.Wz69_kD" alias=".service_locator.lgVQ4lk"/>
+    <service id=".service_locator.5XW6xNt" alias=".service_locator.MhTTffb"/>
+    <service id=".service_locator.fGNegcE" alias=".service_locator.eJsBwxT"/>
+    <service id=".service_locator.Pmi80Oz" alias=".service_locator.eGNsd6t"/>
     <service id=".service_locator.Kyflpr1" alias=".service_locator.CshazM0"/>
     <service id=".service_locator.u6DWx23" alias=".service_locator.cXsfP3P"/>
     <service id=".service_locator.hnz5ZNh" alias=".service_locator.0TACwl3"/>
